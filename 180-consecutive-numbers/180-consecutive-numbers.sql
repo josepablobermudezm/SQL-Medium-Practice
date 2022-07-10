@@ -2,7 +2,7 @@
 
 /*
 
-first slow approach
+first long approach
 with a as (
 select 
     num,
