@@ -1,5 +1,8 @@
 # Write your MySQL query statement below
 
+/*
+
+first slow approach
 with a as (
 select 
     num,
@@ -13,11 +16,12 @@ select
         num as ConsecutiveNums
 from a
 where nextR = num and nextnextR = num
+*/
 
-#select 
-#    distinct 
-#        num as ConsecutiveNums
-#from Logs
-#where (Id + 1, Num) in (select * from Logs) and (Id + 2, Num) in (select * from Logs)
+select 
+    distinct 
+        num as ConsecutiveNums
+from Logs
+where (Id + 1, Num) in (select * from Logs) and (Id + 2, Num) in (select * from Logs)
 
 
